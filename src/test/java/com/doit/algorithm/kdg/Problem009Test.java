@@ -2,10 +2,12 @@ package com.doit.algorithm.kdg;
 
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class Problem009Test {
 
     @Test
-    void test() {
+    void solution_1() {
         int n = 9;
         int len = 8;
         String s = "CCTGGATTG";
@@ -13,11 +15,11 @@ public class Problem009Test {
 
         int result = Problem009.solution(n, len, s, includes);
 
-        System.out.println("result : " + result);
+        assertThat(result).isEqualTo(0);
     }
 
     @Test
-    void test_2() {
+    void solution_2() {
         int n = 4;
         int len = 2;
         String s = "GATA";
@@ -25,6 +27,6 @@ public class Problem009Test {
 
         int result = Problem009.solution(n, len, s, includes);
 
-        System.out.println("result : " + result);
+        assertThat(result).isEqualTo(2);
     }
 }
